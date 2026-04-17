@@ -6,6 +6,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState('');
  
+  // Adiciona tarefa
   const handleAddTask = () => {
     if (input.trim() !== '') {
       setTasks([...tasks, { id: Date.now(), text: input, completed: false }]);
@@ -54,11 +55,11 @@ function App() {
         {tasks.length > 0 && (
           <div className="grid grid-cols-2 gap-3 mb-6">
             <div className="bg-indigo-50 rounded-lg p-4 border border-indigo-200">
-              <p className="text-sm text-gray-600">Total de tarefas</p>
+              <p className="text-sm text-black-600">  Total de tarefas </p>
               <p className="text-2xl font-bold text-indigo-900">{tasks.length}</p>
             </div>
             <div className="bg-green-50 rounded-lg p-4 border border-green-200">
-              <p className="text-sm text-gray-600">Concluídas</p>
+              <p className="text-sm text-black-600">  Concluídas  </p>
               <p className="text-2xl font-bold text-green-900">{completedCount}</p>
             </div>
           </div>
@@ -66,7 +67,7 @@ function App() {
  
         {/* LISTA DE TAREFAS */}
         <div className="bg-white rounded-xl shadow-md p-6 border border-indigo-100">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+          <h2 className="text-1xl font-semi-bold text-gray-800 mb-4">
             Minhas Tarefas
           </h2>
  
